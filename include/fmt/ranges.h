@@ -12,9 +12,11 @@
 #ifndef FMT_RANGES_H_
 #define FMT_RANGES_H_
 
+#ifndef SOUP_BUILD
 #include <initializer_list>
 #include <tuple>
 #include <type_traits>
+#endif
 
 #include "format.h"
 

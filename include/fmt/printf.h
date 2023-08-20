@@ -8,8 +8,10 @@
 #ifndef FMT_PRINTF_H_
 #define FMT_PRINTF_H_
 
+#ifndef SOUP_BUILD
 #include <algorithm>  // std::max
 #include <limits>     // std::numeric_limits
+#endif
 
 #include "format.h"
 

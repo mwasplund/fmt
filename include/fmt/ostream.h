@@ -8,6 +8,7 @@
 #ifndef FMT_OSTREAM_H_
 #define FMT_OSTREAM_H_
 
+#ifndef SOUP_BUILD
 #include <fstream>  // std::filebuf
 
 #if defined(_WIN32) && defined(__GLIBCXX__)
@@ -15,6 +16,8 @@
 #  include <ext/stdio_sync_filebuf.h>
 #elif defined(_WIN32) && defined(_LIBCPP_VERSION)
 #  include <__std_stream>
+#endif
+
 #endif
 
 #include "format.h"

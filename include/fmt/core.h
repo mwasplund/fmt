@@ -8,6 +8,7 @@
 #ifndef FMT_CORE_H_
 #define FMT_CORE_H_
 
+#ifndef SOUP_BUILD
 #include <cstddef>  // std::byte
 #include <cstdio>   // std::FILE
 #include <cstring>  // std::strlen
@@ -16,6 +17,7 @@
 #include <memory>  // std::addressof
 #include <string>
 #include <type_traits>
+#endif
 
 // The fmt library version in the form major * 10000 + minor * 100 + patch.
 #define FMT_VERSION 100100
@@ -1661,7 +1663,6 @@ template <typename Context> class basic_format_arg {
   \endrst
  */
 // DEPRECATED!
-FMT_EXPORT
 template <typename Visitor, typename Context>
 FMT_CONSTEXPR FMT_INLINE auto visit_format_arg(
     Visitor&& vis, const basic_format_arg<Context>& arg) -> decltype(vis(0)) {

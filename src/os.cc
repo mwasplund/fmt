@@ -166,6 +166,7 @@ buffered_file::~buffered_file() noexcept {
 }
 
 buffered_file::buffered_file(cstring_view filename, cstring_view mode) {
+  #pragma warning(suppress : 4996)
   FMT_RETRY_VAL(file_, FMT_SYSTEM(fopen(filename.c_str(), mode.c_str())),
                 nullptr);
   if (!file_)

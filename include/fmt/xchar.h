@@ -8,12 +8,16 @@
 #ifndef FMT_XCHAR_H_
 #define FMT_XCHAR_H_
 
+#ifndef SOUP_BUILD
 #include <cwchar>
+#endif
 
 #include "format.h"
 
+#ifndef SOUP_BUILD
 #ifndef FMT_STATIC_THOUSANDS_SEPARATOR
 #  include <locale>
+#endif
 #endif
 
 FMT_BEGIN_NAMESPACE

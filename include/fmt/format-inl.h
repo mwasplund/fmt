@@ -8,6 +8,8 @@
 #ifndef FMT_FORMAT_INL_H_
 #define FMT_FORMAT_INL_H_
 
+#ifndef SOUP_BUILD
+
 #include <algorithm>
 #include <cerrno>  // errno
 #include <climits>
@@ -20,6 +22,8 @@
 
 #ifdef _WIN32
 #  include <io.h>  // _isatty
+#endif
+
 #endif
 
 #include "format.h"

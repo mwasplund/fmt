@@ -8,6 +8,7 @@
 #ifndef FMT_OS_H_
 #define FMT_OS_H_
 
+#ifndef SOUP_BUILD
 #include <cerrno>
 #include <cstddef>
 #include <cstdio>
@@ -15,6 +16,8 @@
 
 #if defined __APPLE__ || defined(__FreeBSD__)
 #  include <xlocale.h>  // for LC_NUMERIC_MASK on OS X
+#endif
+
 #endif
 
 #include "format.h"

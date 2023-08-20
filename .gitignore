@@ -12,6 +12,7 @@ build/
 support/.cxx
 
 bin/
+out/
 /_CPack_Packages
 /CMakeScripts
 /doc/doxyxml

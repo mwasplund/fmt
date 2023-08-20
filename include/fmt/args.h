@@ -8,9 +8,11 @@
 #ifndef FMT_ARGS_H_
 #define FMT_ARGS_H_
 
+#ifndef SOUP_BUILD
 #include <functional>  // std::reference_wrapper
 #include <memory>      // std::unique_ptr
 #include <vector>
+#endif
 
 #include "core.h"
 

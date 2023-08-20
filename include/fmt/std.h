@@ -8,6 +8,7 @@
 #ifndef FMT_STD_H_
 #define FMT_STD_H_
 
+#ifndef SOUP_BUILD
 #include <atomic>
 #include <bitset>
 #include <cstdlib>
@@ -18,10 +19,12 @@
 #include <typeinfo>
 #include <utility>
 #include <vector>
+#endif
 
 #include "format.h"
 #include "ostream.h"
 
+#ifndef SOUP_BUILD
 #if FMT_HAS_INCLUDE(<version>)
 #  include <version>
 #endif
@@ -46,6 +49,8 @@
 #  ifndef __GABIXX_CXXABI_H__
 #    define FMT_HAS_ABI_CXA_DEMANGLE
 #  endif
+#endif
+
 #endif
 
 // Check if typeid is available.
